@@ -53,13 +53,22 @@ This project covers end to end understanding for creating ML pipeline and workin
 
 dvclive code block:
 1> import dvclive and yaml:
+
 from dvclive import Live
+
 import yaml
+
 2> Add the load_params function and initiate "params" var in main
+
 3> Add below code block to main:
+
 with Live(save_dvc_exp=True) as live:
-    live.log_metric('accuracy', accuracy_score(y_test, y_test))
-    live.log_metric('precision', precision_score(y_test, y_test))
-    live.log_metric('recall', recall_score(y_test, y_test))
+
+    live.log_metric('accuracy', accuracy_score(y_test, y_pred))
+
+    live.log_metric('precision', precision_score(y_test, y_pred))
+
+    live.log_metric('recall', recall_score(y_test, y-pred))
+
 
     live.log_params(params)
