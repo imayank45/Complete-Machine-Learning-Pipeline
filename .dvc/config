@@ -1,0 +1,4 @@
+[core]
+    remote = mks
+['remote "mks"']
+    url = s3://hojapls

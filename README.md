@@ -30,6 +30,16 @@ This project covers end to end understanding for creating ML pipeline and workin
 7. Now do git add, commit and push files to the repository
 
 
+## Add a remote S3 storage to DVC:
+1. Login to AWS console.
+2. Create an IAM user.
+3. Create an S3 bucket.
+4. pip install dvc[s3]
+5. pip install awscli
+6. aws configure
+7. dvc remote add -d dvcstore s3://bucketname
+8. "dvc commit" and "dvc push", the experiment outcome that you want to keep
+9. Finally now do git add, commit and push files to the repository
 
 
 
